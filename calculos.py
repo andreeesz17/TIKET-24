@@ -1,21 +1,21 @@
-def calcularCuota(monto, tasa_interes, meses):
-    tasa_mensual = tasa_interes / 100 / 12
-    cuota = monto * (tasa_mensual * (1 + tasa_mensual) * meses) / ((1 + tasa_mensual) * meses - 1)
-    return cuota
+def calcularCuota(monto, interesAn, Nmeses):
+    tasaMensual =  interesAn / 100 / 12
+    Cuota = (monto * tasaMensual) / (1 -(1 + tasaMensual) **(-Nmeses))
+    return Cuota
 
 from datetime import datetime
 
-def calcularEdad(anioNacimiento):
-    anioActual = datetime.now().year
+def calcularEdad(anNacimiento):
+    anActual = datetime.now().year
     
-    if anioNacimiento < 0 or anioNacimiento > anioActual:
+    if anNacimiento < 0 or anNacimiento > anActual:
         return -1
     
-    edad = anioActual - anioNacimiento
+    edad = anActual - anNacimiento
     return edad
 
-def encontrarMayor(a, b, c):
-    return max(a, b, c)
+def encontrarMayor(prim, secu, terc):
+    return max(prim, secu, terc)
 
-def encontrarMenor(a, b, c, d):
-    return min(a, b, c, d)
+def encontrarMenor(prim, secu, terc, cuar):
+    return min(prim, secu, terc, cuar)
