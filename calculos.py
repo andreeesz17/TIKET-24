@@ -19,3 +19,24 @@ def encontrarMayor(prim, secu, terc):
 
 def encontrarMenor(prim, secu, terc, cuar):
     return min(prim, secu, terc, cuar)
+
+def determinarResultadosIMC(numero):
+    valor=numero
+    if valor < 0 :
+        return "IMC fuera de rango"
+    elif valor < 16:
+        return "Delgadez severa"
+    elif valor < 17:
+        return "Delgadez moderada"
+    elif valor < 18.5:
+        return "Delgadez leve"
+    elif valor < 25:
+        return "Peso normal"
+    elif valor < 30:
+        return "Sobrepeso"
+    elif valor < 35:
+        return "Obesidad Grado 1"
+    elif valor < 40:
+        return "Obesidad Grado 2"
+    else:
+        return "Obesidad Grado 3"  
