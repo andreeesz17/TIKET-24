@@ -1,0 +1,24 @@
+def encontrarMenor(valor1,valor2,valor3,valor4):
+    menoractual=valor1
+    if valor2 < menoractual:
+        menoractual=valor2
+        if valor3 < menoractual:
+            menoractual=valor3
+            if valor4 < menoractual:
+                menoractual=valor4
+            else:
+             return menoractual     
+        else:
+         return menoractual    
+    return menoractual    
+
+def encontrarMayor(valor1,valor2,valor3):
+    mayoractual=valor1
+    if valor2 > mayoractual:
+        mayoractual=valor2
+        if valor3 > mayoractual:
+          mayoractual=valor3    
+        else:
+         return mayoractual                   
+    return mayoractual
+    
